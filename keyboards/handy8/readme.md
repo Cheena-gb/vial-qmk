@@ -1,20 +1,20 @@
-# %KEYBOARD%
+# handy8
 
-![%KEYBOARD%](imgur.com image replace me!)
+![handy8](imgur.com image replace me!)
 
 *A short description of the keyboard/project*
 
-* Keyboard Maintainer: [%REAL_NAME%](https://github.com/%USER_NAME%)
+* Keyboard Maintainer: [Sierra](https://github.com/Cheena_gb)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 
 Make example for this keyboard (after setting up your build environment):
 
-    make %KEYBOARD%:default
+    make handy8:default
 
 Flashing example for this keyboard:
 
-    make %KEYBOARD%:default:flash
+    make handy8:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
