@@ -6,7 +6,7 @@
 
 // wiring of each half
 #define MATRIX_ROW_PINS { GP28, GP27, GP26, GP15, GP14 }
-#define MATRIX_COL_PINS { GP1, GP2, GP3, GP4, GP5, GP6, GP7, GP8 }
+#define MATRIX_COL_PINS { GP0, GP1, GP2, GP3, GP4, GP5, GP6, GP7 }
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
