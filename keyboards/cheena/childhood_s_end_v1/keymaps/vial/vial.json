@@ -4,6 +4,8 @@
         "rows": 10,
         "cols": 8
     },
+	"lighting": "qmk_rgblight",
+    
     "layouts": {
         "keymap":
 [
