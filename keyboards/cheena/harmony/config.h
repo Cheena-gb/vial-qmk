@@ -6,3 +6,6 @@
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+
+#define BOOTMAGIC_ROW 5
+#define BOOTMAGIC_COLUMN 0
