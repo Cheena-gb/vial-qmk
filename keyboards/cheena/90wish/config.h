@@ -2,7 +2,10 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
+#define SOFT_SERIAL_PIN GP0
+#define PAL_USE_CALLBACKS TRUE
 
+#include_next <halconf.h>
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
