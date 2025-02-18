@@ -13,6 +13,8 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+#define RGB_MATRIX_CENTER { 105, 32 }
+
 #ifndef IOS_DEVICE_ENABLE
   #define RGBLIGHT_LIMIT_VAL 180
   #define RGBLIGHT_VAL_STEP 17
