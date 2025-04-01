@@ -45,3 +45,46 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,                   _______, _______, _______, _______,   _______, _______, _______, _______, _______, _______
     )
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case QK_USER_0:
+            // via user keycode QK_USER : toggle leds enable
+            if (record->event.pressed) {
+                lain_enable_leds_toggle();
+            }
+            return false;
+        default:
+            break;
+    }
+    return true;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+        case NUM:
+            lain_set_led(1, 1);
+            lain_set_led(2, 0);
+            break;
+        case FUNC:
+            lain_set_led(1, 0);
+            lain_set_led(2, 1);
+            break;
+    	
+    	case CONF:
+            lain_set_led(1, 1);
+            lain_set_led(2, 1);
+            break;
+
+        default:
+            lain_set_led(1, 0);
+            lain_set_led(2, 0);
+            break;
+    }
+    return state;
+}
+
+bool led_update_user(led_t led_state) {
+    lain_set_led(0, led_state.caps_lock);
+    return false;
+}
