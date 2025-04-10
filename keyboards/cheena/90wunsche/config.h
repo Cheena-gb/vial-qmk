@@ -6,6 +6,9 @@
 #define PAL_USE_CALLBACKS TRUE
 
 #include_next <halconf.h>
+
+#define SPLIT_HAND_PIN GP13
+#define SOFT_SERIAL_PIN GP0
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
