@@ -13,7 +13,6 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-#define RGB_MATRIX_CENTER { 105, 32 }
 #define LED_MATRIX_MAXIMUM_BRIGHTNESS 200
 
 #ifndef IOS_DEVICE_ENABLE
