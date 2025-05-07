@@ -3,6 +3,10 @@
 
 #pragma once
 
+
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL
+
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.

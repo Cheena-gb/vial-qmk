@@ -15,7 +15,7 @@
     },
                 "rgblight": {
         "hue_steps": 10,
-        "led_count": 89,
+        "led_count": 3,
         "animations": {
             "breathing": true,
             "rainbow_mood": true,
@@ -30,7 +30,8 @@
         }
     },
     "ws2812": {
-        "pin": "GP4"
+        "pin": "GP4",
+        "driver": "vendor"
     },
     "encoder": {
     "rotary": [
