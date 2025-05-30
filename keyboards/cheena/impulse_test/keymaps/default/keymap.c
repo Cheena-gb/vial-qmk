@@ -1,0 +1,229 @@
+#include QMK_KEYBOARD_H
+#include "keymap_japanese.h"
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [0] = LAYOUT(
+  
+KC_NO,     KC_NO, JP_ZKHK,    KC_1,    KC_2,           KC_3,    KC_4,    KC_5,   KC_6,             KC_7,    KC_8,    KC_9,    KC_0,         KC_MINS, JP_CIRC,  JP_YEN,  KC_BSPC,  KC_NO,
+KC_NO,     KC_NO,  KC_TAB,             KC_Q,           KC_W,    KC_E,    KC_R,   KC_T,             KC_Y,    KC_U,    KC_I,    KC_O,            KC_P,   JP_AT, JP_LBRC,   KC_ENT,        
+KC_NO,     KC_NO, KC_CAPS,             KC_A,           KC_S,    KC_D,    KC_F,   KC_G,             KC_H,    KC_J,    KC_K,    KC_L,         JP_SCLN, JP_COLN, JP_RBRC,                  
+KC_NO,     KC_NO, KC_RSFT,             KC_Z,           KC_X,    KC_C,    KC_V,   KC_B,             KC_N,    KC_M, KC_COMM,  KC_DOT,         JP_SLSH, JP_BSLS,   KC_UP,            MO(1),
+                  KC_LCTL,          KC_LGUI,        KC_LALT, JP_MHEN,  KC_SPC,                    KC_SPC,         JP_HENK, JP_KANA,          KC_APP, KC_LEFT, KC_DOWN,          KC_RGHT 
+  
+  ),
+  [1] = LAYOUT(
+
+KC_NO,     KC_NO,   KC_NO,   KC_F1,   KC_F2,          KC_F3,  KC_F4,  KC_F5,  KC_F6,            KC_F7,   KC_F8,   KC_F9,  KC_F10,          KC_F11,  KC_F12,   KC_NO,   KC_NO,   KC_NO,
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,   KC_NO,         
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,                  
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO,
+                    KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,                    KC_NO,            KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO 
+  ),
+  [2] = LAYOUT(
+
+KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO,
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO,
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,                     KC_NO,
+                    KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,                    KC_NO,            KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO
+  
+  ),
+  [3] = LAYOUT(
+  
+KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO,
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO,
+KC_NO,     KC_NO,   KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,  KC_NO,            KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_NO,   KC_NO,                     KC_NO,
+                    KC_NO,            KC_NO,          KC_NO,  KC_NO,  KC_NO,                    KC_NO,            KC_NO,   KC_NO,           KC_NO,   KC_NO,   KC_NO,            KC_NO
+  
+  )
+};
+
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [0] = { ENCODER_CCW_CW(KC_NO, KC_NO)  },
+    [1] = { ENCODER_CCW_CW(KC_NO, KC_NO)  },
+    [2] = { ENCODER_CCW_CW(KC_NO, KC_NO)  },
+    [3] = { ENCODER_CCW_CW(KC_NO, KC_NO)  },
+};
+#endif
+
+#ifdef RGB_MATRIX_ENABLE
+led_config_t g_led_config = { {
+  // Key Matrix to LED Index
+{	0		,	1	,	2	,	3	,	4	,	5	,	6	,	7	,	8	}	,
+{	18		,	19	,	20	,	NO_LED	,	21	,	22	,	23	,	24	,	25	}	,
+{	34		,	35	,	36	,	NO_LED	,	37	,	38	,	39	,	40	,	41	}	,
+{	49		,	50	,	51	,	NO_LED	,	52	,	53	,	54	,	55	,	56	}	,
+{	NO_LED	,	NO_LED	,	65	,	NO_LED	,	66	,	67	,	68	,	69	,	NO_LED	}	,
+
+{	9		,		10	,	11	,	12	,	13	,	14	,	15	,	16	,	17	}	,
+{	26		,		27	,	28	,	29	,	39	,	31	,	32	,	33	,	NO_LED	}	,
+{	42		,		43	,	44	,	45	,	46	,	47	,	48	,	NO_LED	,	NO_LED	}	,
+{	57		,		58	,	59	,	60	,	61	,	62	,	63	,	NO_LED	,	64	}	,
+{	70		,	NO_LED	,	71	,	72	,	73	,	74	,	75	,	NO_LED	,	76	}	
+
+
+
+}, {
+  // LED Index to Physical Position
+{7,3},
+{20,3},
+{34,3},
+{47,3},
+{61,3},
+{76,5},
+{90,5},
+{103,11},
+{115,17},
+{132,17},
+{144,11},
+{156,5},
+{170,5},
+{186,3},
+{199,3},
+{213,3},
+{226,3},
+{240,10},
+{7,16},
+{20,16},
+{41,16},
+{57,16},
+{73,17},
+{87,17},
+{99,23},
+{112,29},
+{135,29},
+{147,23},
+{160,17},
+{173,17},
+{189,16},
+{203,16},
+{216,16},
+{231,25},
+{7,28},
+{20,28},
+{37,28},
+{54,28},
+{70,29},
+{84,29},
+{96,35},
+{108,41},
+{138,41},
+{150,35},
+{163,29},
+{177,29},
+{192,28},
+{206,28},
+{220,28},
+{7,41},
+{20,41},
+{35,41},
+{51,41},
+{67,41},
+{80,41},
+{93,47},
+{105,53},
+{141,53},
+{154,47},
+{166,41},
+{180,41},
+{196,41},
+{209,41},
+{226,41},
+{240,41},
+{32,53},
+{47,53},
+{62,56},
+{76,59},
+{95,64},
+{151,64},
+{171,59},
+{184,56},
+{199,53},
+{213,53},
+{226,53},
+{240,53}
+
+
+}, {
+  // LED Index to Flag
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4,
+4
+} };
+#endif

@@ -1,6 +1,6 @@
 {
-    "manufacturer": "sierra]",
-    "keyboard_name": "cheena/cirquetest",
+    "manufacturer": "sierra",
+    "keyboard_name": "cirquetest",
     "maintainer": "Cheena-gb",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
