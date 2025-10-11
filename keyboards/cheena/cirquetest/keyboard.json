@@ -5,23 +5,23 @@
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "features": {
-        "bootmagic": true,
+        "bootmagic": false,
         "command": false,
         "console": false,
         "extrakey": true,
         "mousekey": true,
-        "nkro": true
+        "nkro": false
     },
     "matrix_pins": {
-        "cols": ["GP2"],
-        "rows": ["GP2"]
+        "cols": ["GP12"],
+        "rows": ["GP13"]
     },
     "processor": "RP2040",
     "url": "",
     "usb": {
-        "device_version": "1.0.0",
-        "pid": "0x0000",
-        "vid": "0xFEED"
+        "device_version": "99.9.9",
+        "pid": "0x23B0",
+        "vid": "0xC1ED"
     },
     "layouts": {
         "LAYOUT_ortho_1x1": {
