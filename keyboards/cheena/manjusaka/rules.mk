@@ -1,5 +1,6 @@
+I2C_DRIVER_REQUIRED = yes
 POINTING_DEVICE_ENABLE = yes
-POINTING_DEVICE_DRIVER = cirque_pinnacle_spi
+POINTING_DEVICE_DRIVER = cirque_pinnacle_i2c
 
 # see info.json for bootmagic, command, console, extra key, mouse key, nkro
 
