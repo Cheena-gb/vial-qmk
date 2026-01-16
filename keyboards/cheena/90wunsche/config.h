@@ -2,13 +2,16 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
-#define SOFT_SERIAL_PIN GP0
 #define PAL_USE_CALLBACKS TRUE
+#define SERIAL_PIO_USE_PIO1 // Force the usage of PIO1 peripheral, by default the Serial implementation uses the PIO0 peripheral
 
 #include_next <halconf.h>
 
+#define SERIAL_USART_FULL_DUPLEX
 #define SPLIT_HAND_PIN GP13
-#define SOFT_SERIAL_PIN GP0
+#define SERIAL_USART_TX_PIN GP0
+#define SERIAL_USART_RX_PIN GP1
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
