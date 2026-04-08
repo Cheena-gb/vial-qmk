@@ -14,7 +14,9 @@
 #define LOCKING_RESYNC_ENABLE
 
 #define RGB_MATRIX_CENTER { 105, 32 }
-#define LED_MATRIX_MAXIMUM_BRIGHTNESS 200
+
+/* この下の値をいじるとRGBライトの最大光量が設定できる：最大値255、最小値0*/
+#define RGBLIGHT_LIMIT_VAL 200
 
 #ifndef IOS_DEVICE_ENABLE
   #define RGBLIGHT_LIMIT_VAL 180
