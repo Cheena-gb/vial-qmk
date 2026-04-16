@@ -14,28 +14,3 @@
 #define LOCKING_RESYNC_ENABLE
 
 #define RGB_MATRIX_CENTER { 105, 32 }
-
-/* この下の値をいじるとRGBライトの最大光量が設定できる：最大値255、最小値0*/
-#define RGBLIGHT_LIMIT_VAL 200
-
-#ifndef IOS_DEVICE_ENABLE
-  #define RGBLIGHT_LIMIT_VAL 180
-  #define RGBLIGHT_VAL_STEP 17
-#else
-  #define RGBLIGHT_LIMIT_VAL 50
-  #define RGBLIGHT_VAL_STEP 4
-#endif
-
-#if defined(RGBLIGHT_ENABLE) && !defined(IOS_DEVICE_ENABLE)
-// USB_MAX_POWER_CONSUMPTION value for naked48 keyboard
-//  120  RGBoff, OLEDoff
-//  120  OLED
-//  330  RGB 6
-//  300  RGB 32
-//  310  OLED & RGB 32
-  #define USB_MAX_POWER_CONSUMPTION 400
-#else
-  // fix iPhone and iPad power adapter issue
-  // iOS device need lessthan 100
-  #define USB_MAX_POWER_CONSUMPTION 100
-#endif

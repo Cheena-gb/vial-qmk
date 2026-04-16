@@ -16,7 +16,7 @@
     "bootloader": "rp2040",
             "rgblight": {
         "hue_steps": 10,
-        "led_count": 89,
+        "led_count": 88,
         "animations": {
             "breathing": true,
             "rainbow_mood": true,

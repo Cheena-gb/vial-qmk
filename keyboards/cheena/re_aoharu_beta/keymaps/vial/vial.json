@@ -3,7 +3,7 @@
         "rows": 12,
         "cols": 8
     },
-	"lighting": "qmk_backlight_rgblight",
+	"lighting": "vialrgb",
     
     "layouts": {
         "keymap":
